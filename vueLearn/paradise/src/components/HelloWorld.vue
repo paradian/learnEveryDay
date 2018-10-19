@@ -33,26 +33,27 @@
 </template>
 
 <script>
-import modalTest from './modalTest.vue'
+import ModalTest from "./modalTest.vue";
 export default {
   name: "HelloWorld",
   data() {
     return {
-      modalState:false
-    }
+      modalState: true
+    };
   },
   props: {
     msg: String
   },
-  componments: {
-    modalTest
+  components: {
+    "modal-test": ModalTest
   },
   methods: {
     changeState(state) {
-      this.modalState = state
+      this.modalState = state;
     },
     openModal() {
-      this.modalState = true
+      this.modalState = !this.modalState;
+      console.log(this.modalState)
     }
   }
 };

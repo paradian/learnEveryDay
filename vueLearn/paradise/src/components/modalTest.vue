@@ -7,14 +7,13 @@
 </template>
 <script>
 export default {
-name:"modalTest",
+  name: "modalTest",
   data() {
     return {
-      test: "你好",
-      modalState: false
+      test: "你好"
     };
   },
-  props: ["modalState"],
+  props: ['modalState'],
   methods: {
     closeModal() {
       this.$emit("event", false);
@@ -22,3 +21,13 @@ name:"modalTest",
   }
 };
 </script>
+<style scoped>
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+</style>
