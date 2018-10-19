@@ -27,13 +27,13 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
-    <modal-test :display="modalState" @event="changeState"></modal-test> 
+    <modal-test :display="modalState" @event="changeState">???</modal-test> 
     <button @click="openModal">alert</button>
   </div>
 </template>
 
 <script>
-import ModalTest from "./modalTest.vue";
+import modalTest from "./modalTest.vue";
 export default {
   name: "HelloWorld",
   data() {
@@ -45,7 +45,7 @@ export default {
     msg: String
   },
   components: {
-    "modal-test": ModalTest
+    "modalTest": modalTest
   },
   methods: {
     changeState(state) {

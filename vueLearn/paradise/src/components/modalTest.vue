@@ -13,7 +13,7 @@ export default {
       test: "你好"
     };
   },
-  props: ['modalState'],
+  props: ['display'],
   methods: {
     closeModal() {
       this.$emit("event", false);
@@ -29,5 +29,7 @@ export default {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  height: 300px;
+  width: 200px;
 }
 </style>
