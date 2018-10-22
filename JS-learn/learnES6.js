@@ -10,10 +10,19 @@ const constString = 'leoric';
 // const constString = 'hello world';we can't change the constString which is const;
 console.log(constString);
 var self = this;
-setTimeout (() => {
-    console.log(this.name)
-    console.log(this)
-    this.name = 'hahah'
-    console.log(this.name)
-},500)
+function confirmThis(){
+    setTimeout (function () {
+        console.log(this.name)
+        console.log(this)
+        this.name = 'hahah'
+        console.log(this.name)
+    },500)
+    console.log(this+"hah")
+}
+var test = function () {
+    confirmThis();
+    console.log(this+"anything wrong")
+    console.log('hello')
+}
+test();
 console.log(this.name)

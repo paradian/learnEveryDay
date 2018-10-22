@@ -45,7 +45,7 @@ export default {
     msg: String
   },
   components: {
-    "modalTest": modalTest
+    'modalTest': modalTest
   },
   methods: {
     changeState(state) {
@@ -53,7 +53,7 @@ export default {
     },
     openModal() {
       this.modalState = !this.modalState;
-      console.log(this.modalState)
+      console.log(this.modalState);
     }
   }
 };
