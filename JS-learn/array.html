@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组相关操作</title>
+</head>
+<body>
+
+    <script>
+        var a = [];
+        a.push(1,2);
+        console.log(a)
+        Array.prototype.push = function(item) {
+            this[this.length] = item
+        }
+        // push方法
+         a[a.length]= 6
+         console.log(a)
+        //  pop方法
+         a.length = a.length-1
+         console.log(a)
+        //  delete 方法不会改变数组长度，使用时要注意
+         delete a[1]
+         console.log(a)
+         a.join('---')
+         console.log(a.join('--'))
+         a.map(function(item){
+             return item+'-'
+         })
+         console.log(a.map(function(item){
+             return item+'__'
+         }))
+         var b = 'hello'
+        //  console.log(b.join('@')) 回报b.join is not a function 
+        //  可以使用Array.prototype.(方法).call(string,(parameter))来使string获得数组的方法
+         Array.prototype.join.call(b,('6'))
+         console.log(Array.prototype.join.call(b,('6')))
+         console.log(Array.prototype.map.call(b,function(item){
+             return item+'='
+         }))
+        //  这些方法并不会改变原来的数据
+        </script>
+</body>
+</html>
